@@ -320,7 +320,11 @@ climate:
     visual:
       min_temperature: 16
       max_temperature: 31
-      temperature_step: 1
+      #temperature_step: 1
+      temperature_step:
+        target_temperature: 1      # Sollwert bleibt bei ganzen Graden – mehr kann die Klimaanlage eh nicht einstellen
+        current_temperature: 0.1   # Ist-Temperatur zeigt jetzt eine Nachkommastelle
+
     supported_modes:
       - 'OFF'
       - AUTO
